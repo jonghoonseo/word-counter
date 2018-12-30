@@ -1,6 +1,7 @@
 # word-counter
 
-A word-counter project for Asella
+A word-counter project for Asella \
+https://asella-word-counter.herokuapp.com/
 
 ## Requirement
 
@@ -45,3 +46,38 @@ python csv_word_counter.py data_science_bootcamps.csv \
 ```bash
 python flask_upload.py
 ```
+
+## Deploy
+
+In this project, I use Heroku.com
+
+### Prerequisite
+
+* Install Heroku CLI
+
+```bash
+brew install heroku/brew/heroku
+```
+
+### Deploy
+
+* Before to deploy, test on local machine
+
+```bash
+heroku local web
+```
+
+* Deploy to Heroku server \
+  To deploy, push to Heroku git server
+
+```bash
+git push heroku master
+```
+
+* Get the log tails
+
+```bash
+heroku logs --tail
+```
+
+* Access URL: https://asella-word-counter.herokuapp.com/
