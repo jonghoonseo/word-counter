@@ -1,0 +1,23 @@
+{% extends "upload.html" %}
+
+{% block result %}
+    <div class="table-responsive">
+        <table class="table table-striped" id="result">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Word</th>
+                    <th scope="col">Numbers</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for key in sorted_statistics %}
+                <tr>
+                    <th scope="row">{{ key }}</th>
+                    <td> {{ statistics[key]|length }} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

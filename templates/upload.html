@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+        <form action="http://localhost:5000/fileUpload" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Choose a CSV file...</label>
+                <input type="file" class="form-control" name="file" />
+            </div>
+            <div class="form-group">
+                <label for="columnName">Column Name</label>
+                <input type="text" class="form-control" name="column_name" value="MESSAGES" />
+            </div>
+            <div class="form-group">
+                <label for="includePattern">Include Pattern</label>
+                <input type="text" class="form-control" name="include_pattern" placeholder="*" />
+            </div>
+            <div class="form-group">
+                    <label for=excludePattern">Exclude Pattern</label>
+                    <input type="text" class="form-control" name="exclude_pattern" />
+                </div>
+                <input type="submit" />
+        </form>
+
+        <hr/>
+        {% block result %}
+        {% endblock %}
+{% endblock %}
