@@ -41,7 +41,8 @@ def count(statistics, sentence, row_index):
         # check if this is in exclude pattern or already checked
         if ((EXCLUDE_PATTERN and re.match(
                 EXCLUDE_PATTERN, word, re.IGNORECASE)) or
-                word in unique_words):
+                word in unique_words or
+                not word):
             continue
 
         unique_words.add(word)
